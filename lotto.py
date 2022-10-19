@@ -82,6 +82,15 @@ for i in range(6):
         rand_number = int(random()*45+1)
 
         # 뽑을 때 부터 범위지정해서 에러처리 x
+        # 당첨범호 목록에 있는지? > 중복인가?
+        is_duplicated = rand_number in win_number_list
+
+        # 중보이 아니면 목록에 등록, 다음 숫자 뽑으러.
+        if not is_duplicated :
+            win_number_list.append(rand_number)
+            break
+
+print(f'당첨본호 : {win_number_list}')
 
 
 
