@@ -100,6 +100,8 @@ win_number_list.sort()
 
 while True:
     # 1~45의 랜덤을 쉽게 뽑는 방법?
+    # win_number_list = sample ( range(1, 46), 6) > 파이썬의 sample 기능을 활용 random 추출 / 6개 중복 x 
+    # 위에 한줄로 하기 코드 대체 가능 
     rand_num = randint(1, 45)
 
     is_already_num = rand_num in win_number_list
