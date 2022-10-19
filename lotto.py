@@ -77,7 +77,13 @@ win_number_list = list()
 for i in range(6):
     # 사용할 수 있는 번호가 나올때 까지 무한 반복
     while True :# random.random() > 0.0 ~ 0.9999의 랜덤값 출현
-        rand_number = random()
+
+        # 0<= 랜덤값 < 1 1~45의 값으로 바꾸자. >랜덤값에 * 45로 > 0 * 45+1 <= 랜덤값 * 45 +1< 1*45 +1
+        rand_number = int(random()*45+1)
+
+        # 뽑을 때 부터 범위지정해서 에러처리 x
+
+
 
 
 
