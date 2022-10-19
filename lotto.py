@@ -3,6 +3,7 @@
 # 1. 6개의 숫자 입력받기 
 
 # 6개의 숫자를 담을 list를 생성
+from argparse import _MutuallyExclusiveGroup
 from re import M
 
 
@@ -39,6 +40,32 @@ for i in range(6):
             # 범위 검사 탈락 시 안내문구
             print('1~45의 값만 입력 가능합니다.')
             # 다시 입력 시킨다 > 무한박복 유지 > break x
+
+
+# 입력한 숫자 목록 확인
+print(f'내 숫자 목록 : {my_lotto_numbers}')
+
+
+# 숫자 목록을 작은 수 ~ 큰 수로 정렬. (sort)
+
+# bubble sort 구현해보기
+
+# 2개씩 짝지어 비교 > 순서가 잘못 됐으면 서로 위치 변경 > 통째로 6번 반복
+
+# 총 6개의 숫자를 모두 뽑아서 확인
+for idx,val in enumerate(my_lotto_numbers):
+    #2개씩 뽑아서 비교
+    for j in range(5) :
+    # 6회 반복 시 : 0, 1번 비교 > 1, 2 비교 > 2, 3 비교 > 3, 4 비교 > 4, 5비교 > 5, 6비교(여기서 오류 그래서 5로 지정)
+
+    #순서가 잘못 되었나? > 앞의 숫자가 더 큰가?
+        if my_lotto_numbers[j] > my_lotto_numbers[j+1]:
+            #두 자료의 위치를 변경
+            backup = my_lotto_numbers[j]
+            my_lotto_numbers[j] = my_lotto_numbers[j+1]
+            my_lotto_numbers[j+1] = backup
+
+print(my_lotto_numbers)
 
         
     
