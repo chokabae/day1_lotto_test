@@ -98,6 +98,32 @@ win_number_list.sort()
 print(win_number_list)
 
 
+# 내 번호 목록 / 당첨 번호 목록 중 같은 갯수?
+correct_count=0
+
+# 내 번호를 하나씩 꺼내서 (반복) > 당첨번호 안에 있는가? 질문
+# my_number_list > list로 되어있다.
+
+for my_num in my_lotto_numbers:
+    # 하나씩 꺼내는 my_num이 당첨번호에 포함되어 있나?
+    if my_num in win_number_list:
+        correct_count += 1 # 맞춘 숫자 하나 더 발견!
+
+# 갯수에 따른 등수 판정
+
+if correct_count == 6:
+    print('1등!')
+elif correct_count == 5:
+    #보너스 번호 추가 검사 필요
+    #임시로 3등 처리
+    print('3등!')
+elif correct_count == 4:
+    print('4등!')
+elif correct_count == 3:
+    print('5등!')
+else : 
+    print('낙첨')
+
 
 
 
