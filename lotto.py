@@ -7,5 +7,5 @@ my_lotto_numbers = list()
 
 # 6번 숫자를 입력 : for
 for i in range(6):
-    input_num = int(input(f'{i}번째 로또 번호 입력 : '))
+    input_num = int(input(f'{i+1}번째 로또 번호 입력 : '))
     
