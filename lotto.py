@@ -90,7 +90,12 @@ for i in range(6):
             win_number_list.append(rand_number)
             break
 
-print(f'당첨본호 : {win_number_list}')
+print(f'당첨번호 : {win_number_list}')
+
+# 당첨 번호도 순서대로 정리 - 파이썬 제공 기능 활용
+win_number_list.sort()
+
+print(win_number_list)
 
 
 
