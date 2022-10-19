@@ -137,8 +137,15 @@ if correct_count == 6:
     print('1등!')
 elif correct_count == 5:
     #보너스 번호 추가 검사 필요
-    #임시로 3등 처리
-    print('3등!')
+
+    # 보너스 번호를 맞췄다면 2등
+    # 아니면 3등
+
+    if bonus_num in my_lotto_numbers:
+        print('2등!')
+    else : 
+        print('3등!')
+
 elif correct_count == 4:
     print('4등!')
 elif correct_count == 3:
