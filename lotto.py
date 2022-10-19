@@ -3,6 +3,9 @@
 # 1. 6개의 숫자 입력받기 
 
 # 6개의 숫자를 담을 list를 생성
+from re import M
+
+
 my_lotto_numbers = list()
 
 # 6번 숫자를 입력 : for
@@ -19,8 +22,15 @@ for i in range(6):
 
         is_range_ok = (1 <= input_num) and (input_num <= 45)
 
-        if is_range_ok:
+        # 무한 반복 종료 조건 2. 이미 등록한 번호가 아니어야함.
+        # 중복인가 ? 내 로또 번호에 이미, 입력값이 들어 있는가?
+        # input_num이 my_lotto_num 안에 포함되어 있는가?
+        is_duplicated = input_num in my_lotto_numbers
+
+        if is_range_ok :
             # 검사 통과 시 무한반복 종료
+            # 입력 값을 내 로또 번호로 등록 > 중복검사에도 활용 가능 
+            my_lotto_numbers.append(input_num)
             break
         else : 
             # 범위 검사 탈락 시 안내문구
