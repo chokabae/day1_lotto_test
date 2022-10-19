@@ -95,6 +95,10 @@ print(f'당첨번호 : {win_number_list}')
 # 당첨 번호도 순서대로 정리 - 파이썬 제공 기능 활용
 win_number_list.sort()
 
+# 임시 처리 : 당첨번호를 고정해둬야 테스트하기 편하다.
+
+win_number_list = [10, 15, 20, 25, 30, 35]
+
 print(win_number_list)
 
 
